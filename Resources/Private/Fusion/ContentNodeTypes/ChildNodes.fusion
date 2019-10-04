@@ -19,7 +19,6 @@ prototype(TechDivision.Card.Decks:ChildNodes) < prototype(Neos.Fusion:Join) {
             items = ${showHiddenInMenus}
             itemName = 'node'
             itemRenderer = TechDivision.Card:Integration.Card {
-                @context.linkedNode = ${node}
                 cardLayout.overrideCardLayout {
                     @position = 'before defaultCardLayout'
                     condition = ${cardsLayout}

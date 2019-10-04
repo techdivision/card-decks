@@ -3,20 +3,20 @@
   ui:
     inspector:
       tabs:
-        layout:
+        'layout':
           icon: 'icon-object-group'
           label: i18n
           position: 10
       groups:
-        layout:
+        'layout':
           label: i18n
           position: 10
-          tab: layout
-        deckSettings:
+          tab: 'layout'
+        'deckSettings':
           icon: 'icon-th'
           label: i18n
           position: 1
-          tab: layout
+          tab: 'layout'
   properties:
     numberOfColumns:
       type: string
@@ -45,7 +45,7 @@
         label: i18n
         reloadPageIfChanged: true
         inspector:
-          group: layout
+          group: 'layout'
           position: 2
           editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
           editorOptions:

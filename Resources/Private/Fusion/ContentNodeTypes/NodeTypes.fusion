@@ -10,7 +10,6 @@ prototype(TechDivision.Card.Decks:NodeTypes) < prototype(Neos.Fusion:Join) {
             items = ${q(site).find(Array.join(Array.map(nodeTypes, x => '[instanceof ' + x + ']'), ',')).get()}
             itemName = 'node'
             itemRenderer = TechDivision.Card:Integration.Card {
-                @context.linkedNode = ${node}
                 cardLayout.overrideCardLayout {
                     @position = 'before defaultCardLayout'
                     condition = ${cardsLayout}

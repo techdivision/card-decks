@@ -10,7 +10,6 @@ prototype(TechDivision.Card.Decks:SelectedNodes) < prototype(Neos.Fusion:Join) {
             items =  ${q(node).property('selectedNodes') ? q(node).property('selectedNodes') : []}
             itemName = 'node'
             itemRenderer = TechDivision.Card:Integration.Card {
-                @context.linkedNode = ${node}
                 cardLayout.overrideCardLayout {
                     @position = 'before defaultCardLayout'
                     condition = ${cardsLayout}
