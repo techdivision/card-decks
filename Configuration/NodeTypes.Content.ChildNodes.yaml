@@ -1,0 +1,31 @@
+'TechDivision.Card.Decks:ChildNodes':
+  superTypes:
+    'TechDivision.Card.Decks:DeckMixin': true
+    'Neos.Neos:Content': true
+  ui:
+    label: i18n
+    help:
+      message: i18n
+    group: 'cards'
+    icon: 'icon-th'
+    position: 'after TechDivision.Card.Decks:ContentCards'
+  properties:
+    childNodeEntryPoint:
+      type: reference
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: 'deckSettings'
+          position: 15
+    showHiddenInMenus:
+      type: boolean
+      defaultValue: false
+      ui:
+        label: i18n
+        help:
+          message: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: 'layout'
+          position: 'end'

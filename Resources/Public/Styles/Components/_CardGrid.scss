@@ -1,0 +1,156 @@
+.card-grid {
+  margin: 20px auto;
+  @media (min-width: 300px) and (max-width: 575px) {
+    width: 300px;
+  }
+  @media (min-width: 576px) and (max-width: 767px){
+    width: 500px;
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    width: 700px;
+  }
+  @media (min-width: 992px) and (max-width: 1439px){
+    width: 900px;
+  }
+  @media (min-width: 1440px) {
+    width: 1200px;
+  }
+
+  /* Styles for IE10 and IE11 */
+  @media all and (-ms-high-contrast:none) {
+    width: 900px;
+  }
+
+  /* Styles only for Edge */
+  @supports (-ms-ime-align:auto) and (-webkit-text-stroke:initial) and (not(position:sticky)) {
+    width:900px;
+  }
+
+  select {
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 200px;
+  }
+}
+
+.card-grid--container {
+  display: grid;
+  grid-template-rows: minmax(200px, auto);
+  grid-auto-flow: row dense;
+  &.neos-contentcollection:before {
+    content: "";
+  }
+
+  &-one-column {
+    @media (min-width: 1440px) {
+      grid-template-columns: repeat(1, calc(1200px - 30px));
+      padding-left: 15px;
+      grid-gap: 30px;
+    }
+    @media (min-width: 992px) and (max-width: 1439px) {
+      grid-template-columns: repeat(1, calc(900px - 30px));
+      padding-left: 15px;
+      grid-gap: 30px;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      grid-template-columns: repeat(1, calc(700px - 30px));
+      padding-left: 15px;
+      grid-gap: 30px;
+    }
+    @media (min-width: 576px) and (max-width: 767px) {
+      grid-template-columns: repeat(1, calc(500px - 30px));
+      padding-left: 15px;
+      grid-gap: 30px;
+    }
+    @media (min-width: 300px) and (max-width: 575px) {
+      grid-template-columns: repeat(1, calc(300px - 30px));
+      padding-left: 15px;
+      row-gap: 30px;
+    }
+  }
+
+  &-two-column {
+    @media (min-width: 1440px) {
+      grid-gap: 30px;
+      grid-template-columns: repeat(2, calc(600px - 30px));
+      padding-left: 15px;
+    }
+    @media (min-width: 992px) and (max-width: 1439px) {
+      grid-gap: 30px;
+      grid-template-columns: repeat(2, calc(450px - 30px));
+      padding-left: 15px;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      grid-template-columns: repeat(2, calc(350px - 30px));
+      grid-gap: 30px;
+      padding-left: 15px;
+    }
+    @media (min-width: 576px) and (max-width: 767px){
+      grid-template-columns: repeat(1, 500px - 30px);
+      padding-left: 15px;
+      row-gap: 30px;
+    }
+    @media (min-width: 300px) and (max-width: 575px) {
+      grid-template-columns: repeat(1, 300px - 30px);
+      padding-left: 15px;
+      row-gap: 30px;
+    }
+  }
+
+  &-three-column {
+    @media (min-width: 1440px) {
+      grid-gap: 30px;
+      grid-template-columns: repeat(3, calc(400px - 30px));
+      padding-left: 15px;
+    }
+    @media (min-width: 992px) and (max-width: 1439px) {
+      grid-gap: 30px;
+      grid-template-columns: repeat(3, calc(300px - 30px));
+      padding-left: 15px;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      grid-gap: 30px;
+      grid-template-columns: repeat(2, calc(350px - 30px));
+      padding-left: 15px;
+    }
+    @media (min-width: 576px) and (max-width: 767px){
+      grid-template-columns: repeat(1, 500px - 30px);
+      padding-left: 15px;
+      row-gap: 30px;
+    }
+    @media (min-width: 300px) and (max-width: 575px) {
+      grid-template-columns: repeat(1, 300px - 30px);
+      padding-left: 15px;
+      row-gap: 30px;
+    }
+  }
+
+  &-four-column {
+    @media (min-width: 1440px) {
+      grid-gap: 30px;
+      grid-template-columns: repeat(4, calc(300px - 30px));
+      padding-left: 15px;
+    }
+    @media (min-width: 992px) and (max-width: 1439px) {
+      grid-gap: 30px;
+      grid-template-columns: repeat(3, calc(300px - 30px));
+      padding-left: 15px;
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      grid-gap: 30px;
+      grid-template-columns: repeat(2, calc(350px - 30px));
+      padding-left: 15px;
+    }
+    @media (min-width: 576px) and (max-width: 767px){
+      grid-template-columns: repeat(1, 500px - 30px);
+      padding-left: 15px;
+      row-gap: 30px;
+    }
+    @media (min-width: 300px) and (max-width: 575px) {
+      grid-template-columns: repeat(1, 300px - 30px);
+      padding-left: 15px;
+      row-gap: 30px;
+    }
+  }
+}

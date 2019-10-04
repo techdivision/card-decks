@@ -1,0 +1,17 @@
+{
+  "description": "TechDivision.Card.Decks",
+  "type": "neos-package",
+  "name": "techdivision/card-decks",
+  "keywords": ["card", "teaser", "neos", "nodetypes"],
+  "license": [
+    "GPL-3.0-or-later"
+  ],
+  "require": {
+    "techdivision/card" : "^1.0.0"
+  },
+  "extra": {
+    "neos": {
+      "package-key": "TechDivision.Card.Decks"
+    }
+  }
+}

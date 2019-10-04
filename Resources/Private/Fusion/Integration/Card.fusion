@@ -1,0 +1,44 @@
+prototype(TechDivision.Card:Integration.Card) {
+
+    cardColumns =  ${q(node).property('cardWidth') == '' ? 'card-width-1' : q(node).property('cardWidth')}
+
+    renderer >
+    renderer = afx`
+        <TechDivision.Card:Augmenter.CardLayoutAugmenter>
+            <div class={props.cardColumns} @if.condition={props.cardLayout == ''}>
+                <TechDivision.Card:Template.Card.Basic
+                        imageUri={props.imageUri}
+                        targetUri={props.targetUri}
+                        buttonText={props.buttonText}
+                        supportingText={props.supportingText}
+                        supportingTextDisplayCondition={props.supportingTextDisplayCondition}
+                        linkedTitleDisplayCondition={props.linkedTitleDisplayCondition}
+                        cardTitle={props.cardTitle}
+                        secondaryText={props.secondaryText} />
+            </div>
+            <div class={props.cardColumns} @if.condition={props.cardLayout == 'onlyTitleAndSupportingText'}>
+                <TechDivision.Card:Template.Card.OnlyTitleAndSupportingText
+                        targetUri={props.targetUri}
+                        buttonText={props.buttonText}
+                        supportingText={props.supportingText}
+                        supportingTextDisplayCondition={props.supportingTextDisplayCondition}
+                        linkedTitleDisplayCondition={props.linkedTitleDisplayCondition}
+                        cardTitle={props.cardTitle}
+                        secondaryText={props.secondaryText} />
+            </div>
+            <div class={props.cardColumns} @if.condition={props.cardLayout == 'titleAboveMedia'}>
+                <TechDivision.Card:Template.Card.TitleAboveMedia
+                        imageUri={props.imageUri}
+                        targetUri={props.targetUri}
+                        buttonText={props.buttonText}
+                        supportingText={props.supportingText}
+                        supportingTextDisplayCondition={props.supportingTextDisplayCondition}
+                        linkedTitleDisplayCondition={props.linkedTitleDisplayCondition}
+                        cardTitle={props.cardTitle}
+                        secondaryText={props.secondaryText} />
+            </div>
+        </TechDivision.Card:Augmenter.CardLayoutAugmenter>
+    `
+}
+
+

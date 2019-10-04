@@ -1,0 +1,7 @@
+prototype(Neos.Neos:Page) {
+    head.stylesheets.cardGrid = TechDivision.Card:Atom.Stylesheet {
+        stylesheet = Neos.Fusion:ResourceUri {
+            path = 'resource://TechDivision.Card.Decks/Public/Styles/Style.css'
+        }
+    }
+}

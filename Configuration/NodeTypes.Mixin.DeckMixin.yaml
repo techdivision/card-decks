@@ -1,0 +1,61 @@
+'TechDivision.Card.Decks:DeckMixin':
+  abstract: true
+  ui:
+    inspector:
+      tabs:
+        layout:
+          icon: 'icon-object-group'
+          label: i18n
+          position: 10
+      groups:
+        layout:
+          label: i18n
+          position: 10
+          tab: layout
+        deckSettings:
+          icon: 'icon-th'
+          label: i18n
+          position: 1
+          tab: layout
+  properties:
+    numberOfColumns:
+      type: string
+      defaultValue: ''
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: 'layout'
+          position: 1
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: '4'
+              'card-grid--container-three-column':
+                label: '3'
+              'card-grid--container-two-column':
+                label: '2'
+              'card-grid--container-one-column':
+                label: '1'
+    cardsLayout:
+      type: string
+      defaultValue: ''
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: layout
+          position: 2
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: i18n
+              'basic':
+                label: i18n
+              titleAboveMedia:
+                label: i18n
+              onlyTitleAndSupportingText:
+                label: i18n
+

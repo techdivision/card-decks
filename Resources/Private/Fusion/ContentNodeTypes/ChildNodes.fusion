@@ -1,0 +1,57 @@
+prototype(TechDivision.Card.Decks:ChildNodes) >
+prototype(TechDivision.Card.Decks:ChildNodes) < prototype(Neos.Fusion:Join) {
+
+    cardArea = Neos.Neos:ContentComponent {
+        @context.childNodeEntryPoint = ${q(node).property('childNodeEntryPoint') ? q(node).property('childNodeEntryPoint') : []}
+        @context.cardsLayout = ${q(node).property('cardsLayout') ? q(node).property('cardsLayout') : ''}
+        @context.showHiddenInMenus = Neos.Fusion:Case {
+            hideHiddenDocuments {
+                condition = ${q(node).property('showHiddenInMenus') == false}
+                renderer = ${q(childNodeEntryPoint).children('[instanceof Neos.Neos:Document][_hiddenInIndex][_hiddenInIndex != true]').get()}
+            }
+            showHiddenDocuments {
+                condition = ${q(node).property('showHiddenInMenus') == true}
+                renderer = ${q(childNodeEntryPoint).children('[instanceof Neos.Neos:Document]').get()}
+            }
+        }
+
+        childNodesRenderer = Neos.Fusion:Loop {
+            items = ${showHiddenInMenus}
+            itemName = 'node'
+            itemRenderer = TechDivision.Card:Integration.Card {
+                @context.linkedNode = ${node}
+                cardLayout.overrideCardLayout {
+                    @position = 'before defaultCardLayout'
+                    condition = ${cardsLayout}
+                    renderer = ${cardsLayout == 'basic' ? '' : cardsLayout}
+                }
+            }
+        }
+
+        contentClass = Neos.Fusion:Join {
+            defaultClass = 'card-grid--container'
+            customClass = ${q(node).property('numberOfColumns') == '' ? 'card-grid--container-four-column' : q(node).property('numberOfColumns')}
+            @glue = ' '
+        }
+
+        renderer = afx`
+            <div class="card-grid">
+                <div class={props.contentClass}>
+                    {props.childNodesRenderer}
+                </div>
+            </div>
+        `
+
+    }
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${Neos.Caching.descendantOfTag(childNodeEntryPoint)}
+        }
+    }
+}

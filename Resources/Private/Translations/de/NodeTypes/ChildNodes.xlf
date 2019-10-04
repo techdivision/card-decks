@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Card.Decks" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <target xml:lang="de">Deck mit Unterseiten (automatisch)</target>
+            </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <target xml:lang="de"><![CDATA[
+    Deck zur Anzeige von untergeordneten (Kind-)Dokumenten.
+    Nach Auswahl des gewünschten Eltern-Dokuments im Inspektor werden
+    alle direkten Kind-Dokumente als Cards ausgegeben.
+![TechDivisionCard](/_Resources/Static/Packages/TechDivision.Card.Decks/Documentation/de/ChildNodes_de.png)
+]]></target>
+            </trans-unit>
+            <trans-unit id="properties.childNodeEntryPoint" xml:space="preserve">
+                <target xml:lang="de">Eltern-Dokument</target>
+            </trans-unit>
+            <trans-unit id="properties.showHiddenInMenus" xml:space="preserve">
+                <target xml:lang="de">Versteckte Documents anzeigen</target>
+            </trans-unit>
+            <trans-unit id="properties.showHiddenInMenus.ui.help.message" xml:space="preserve">
+                <target xml:lang="de">Documents mit aktviertem "In Menüs verbergen" werden nicht angezeigt (default). Aktivieren, wenn sie dennoch angezeigt werden sollen.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

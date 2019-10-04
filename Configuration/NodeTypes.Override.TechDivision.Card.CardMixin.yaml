@@ -1,0 +1,24 @@
+'TechDivision.Card:CardMixin':
+  properties:
+    cardWidth:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'TechDivision.Card.Decks:NodeTypes.CardMixin:property.cardwidth.label'
+        help:
+          message: 'TechDivision.Card.Decks:NodeTypes.CardMixin:property.cardwidth.ui.help.message'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'layout'
+          position: 1
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              '':
+                label: '1'
+              card-width-2:
+                label: '2'
+              card-width-3:
+                label: '3'
+              card-width-4:
+                label: '4'

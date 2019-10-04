@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Card.Decks" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <target xml:lang="de">Deck mit auswählbaren Nodes (automatisch)</target>
+            </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <target xml:lang="de"><![CDATA[
+    Deck zur Anzeige ausgewählter Document Nodes als Cards.
+    Die gewünschten Nodes können im Inspektor ausgewählt werden. 
+![TechDivisionCard](/_Resources/Static/Packages/TechDivision.Card.Decks/Documentation/de/SelectedNodes_de.png)
+]]></target>
+            </trans-unit>
+            <trans-unit id="properties.targetNode" xml:space="preserve">
+                <target xml:lang="de">Nodes auswählen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

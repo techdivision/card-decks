@@ -1,0 +1,41 @@
+prototype(TechDivision.Card.Decks:ContentCards) >
+prototype(TechDivision.Card.Decks:ContentCards) < prototype(Neos.Fusion:Join) {
+    // we need all the referenceTargets as nodes to properly clear the cache.
+    @context.documentCardReferenceNodes = Neos.Fusion:Map {
+        items = ${q(node).find('[instanceof TechDivision.Card:DocumentCard]') }
+        itemName = 'documentCard'
+        itemRenderer = ${q(documentCard).property('referenceTarget') ? q(documentCard).property('referenceTarget') : documentCard}
+    }
+
+    cardArea = Neos.Neos:ContentComponent {
+        @context.gridColumns = ${q(node).property('numberOfColumns') == '' ? 'card-grid--container-four-column' : q(node).property('numberOfColumns')}
+
+        contentCards = Neos.Neos:ContentCollection {
+            nodePath = 'contentCards'
+            attributes.class.@process.collectionClass >
+            attributes.class = Neos.Fusion:Join {
+                mainClass = 'card-grid'
+                defaultClass = 'card-grid--container'
+                customClass = ${gridColumns}
+                @glue = ' '
+            }
+        }
+
+        renderer = afx`
+            {props.contentCards}
+        `
+
+    }
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${Neos.Caching.descendantOfTag(node)}
+            3 = ${Neos.Caching.nodeTag(documentCardReferenceNodes)}
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Card.Decks" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <target xml:lang="de">Deck mit bestimmten NodeTypes (automatisch)</target>
+            </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <target xml:lang="de"><![CDATA[
+    Deck zur Anzeige bestimmter Document-NodeTypes als Cards.
+    NodeTypes können in Inspektor ausgewählt werden.
+![TechDivisionCard](/_Resources/Static/Packages/TechDivision.Card.Decks/Documentation/de/NodeTypes_de.png)
+]]></target>
+            </trans-unit>
+            <trans-unit id="properties.targetReference" xml:space="preserve">
+                <target xml:lang="de">NodeTypes auswählen</target>
+            </trans-unit>
+            <trans-unit id="properties.nodeTypes" xml:space="preserve">
+                <target xml:lang="de">NodeTypes</target>
+            </trans-unit>
+            <trans-unit id="properties.nodeTypes.selectBoxEditor.placeholder" xml:space="preserve">
+                <target xml:lang="de">Bitte entsprechende NodeTypes konfigurieren</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

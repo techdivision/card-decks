@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Card.Decks" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="property.cardwidth.label" xml:space="preserve">
+                <source>Card width</source>
+            </trans-unit>
+            <trans-unit id="property.cardwidth.ui.help.message" xml:space="preserve">
+                <source>Relative card width within a deck or as defined in your individual styles.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

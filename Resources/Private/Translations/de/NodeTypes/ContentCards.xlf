@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Card.Decks" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <target xml:lang="de">Deck mit Content Cards (manuell)</target>
+            </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <target xml:lang="de"><![CDATA[
+    Deck zur manuellen Pflege von Content- und Document-Cards.
+![TechDivisionCard](/_Resources/Static/Packages/TechDivision.Card.Decks/Documentation/de/ContentCards_de.png)
+]]></target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

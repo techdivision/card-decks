@@ -1,0 +1,48 @@
+prototype(TechDivision.Card.Decks:SelectedNodes) >
+prototype(TechDivision.Card.Decks:SelectedNodes) < prototype(Neos.Fusion:Join) {
+
+    @context.selectedNodes = ${q(node).property('selectedNodes') ? q(node).property('selectedNodes') : []}
+
+    cardArea = Neos.Neos:ContentComponent {
+        @context.cardsLayout = ${q(node).property('cardsLayout') ? q(node).property('cardsLayout') : ''}
+
+        targetRenderer = Neos.Fusion:Loop {
+            items =  ${q(node).property('selectedNodes') ? q(node).property('selectedNodes') : []}
+            itemName = 'node'
+            itemRenderer = TechDivision.Card:Integration.Card {
+                @context.linkedNode = ${node}
+                cardLayout.overrideCardLayout {
+                    @position = 'before defaultCardLayout'
+                    condition = ${cardsLayout}
+                    renderer = ${cardsLayout == 'basic' ? '' : cardsLayout}
+                }
+            }
+        }
+
+        contentClass = Neos.Fusion:Join {
+            defaultClass = 'card-grid--container'
+            customClass = ${q(node).property('numberOfColumns') == '' ? 'card-grid--container-four-column' : q(node).property('numberOfColumns')}
+            @glue = ' '
+        }
+
+        renderer = afx`
+            <div class="card-grid">
+                <div class={props.contentClass}>
+                    {props.targetRenderer}
+                </div>
+            </div>
+        `
+
+    }
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            1 = ${Neos.Caching.nodeTag(node)}
+            2 = ${Neos.Caching.nodeTag(selectedNodes)}
+        }
+    }
+}

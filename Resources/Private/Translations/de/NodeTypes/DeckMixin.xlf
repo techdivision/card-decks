@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Card.Decks" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="properties.numberOfColumns" xml:space="preserve">
+                <target xml:lang="de">Anzahl Spalten</target>
+            </trans-unit>
+            <trans-unit id="tabs.layout" xml:space="preserve">
+                <target xml:lang="de">Layout</target>
+            </trans-unit>
+            <trans-unit id="groups.layout" xml:space="preserve">
+                <target xml:lang="de">Layout</target>
+            </trans-unit>
+            <trans-unit id="groups.deckSettings" xml:space="preserve">
+                <target xml:lang="de">Deck-Konfiguration</target>
+            </trans-unit>
+            <trans-unit id="properties.cardsLayout" xml:space="preserve">
+                <target xml:lang="de">Card-Layout überschreiben</target>
+            </trans-unit>
+            <trans-unit id="properties.cardsLayout.selectBoxEditor.values." xml:space="preserve">
+                <target xml:lang="de">Nicht überschreiben</target>
+            </trans-unit>
+            <trans-unit id="properties.cardsLayout.selectBoxEditor.values.basic" xml:space="preserve">
+                <target xml:lang="de">Basic</target>
+            </trans-unit>
+            <trans-unit id="properties.cardsLayout.selectBoxEditor.values.titleAboveMedia" xml:space="preserve">
+                <target xml:lang="de">Titel über dem Bild</target>
+            </trans-unit>
+            <trans-unit id="properties.cardsLayout.selectBoxEditor.values.onlyTitleAndSupportingText" xml:space="preserve">
+                <target xml:lang="de">Nur Titel und Beschreibung</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

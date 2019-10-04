@@ -1,0 +1,41 @@
+/* Column width for Cards */
+
+.card-width-1 {
+  grid-column-start: span 1;
+}
+
+.card-width-2 {
+  @media (min-width: 300px) and (max-width: 767px) {
+    grid-column-start: span 1;
+  }
+  @media (min-width: 768px)  {
+    grid-column-start: span 2;
+  }
+}
+
+.card-width-3 {
+  @media (min-width: 300px) and (max-width: 767px)  {
+    grid-column-start: span 1;
+  }
+  @media (min-width: 768px) and (max-width: 991px)  {
+    grid-column-start: span 2;
+  }
+  @media (min-width: 992px) {
+    grid-column-start: span 3;
+  }
+}
+
+.card-width-4 {
+  @media (min-width: 300px) and (max-width: 767px)  {
+    grid-column-start: span 1;
+  }
+  @media (min-width: 768px) and (max-width: 991px)  {
+    grid-column-start: span 2;
+  }
+  @media (min-width: 992px) and (max-width: 1439px) {
+    grid-column-start: span 3;
+  }
+  @media (min-width: 1440px)  {
+    grid-column-start: span 4;
+  }
+}

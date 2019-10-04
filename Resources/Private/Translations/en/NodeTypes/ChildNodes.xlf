@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="TechDivision.Card.Decks" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+                <source>Deck with child nodes (automatic)</source>
+            </trans-unit>
+            <trans-unit id="properties.childNodeEntryPoint" xml:space="preserve">
+                <source>Child node entry point</source>
+            </trans-unit>
+            <trans-unit id="ui.help.message" xml:space="preserve">
+                <source><![CDATA[
+    Deck that shows all document child nodes of a selected node.
+    Please select your parent node in the inspector.
+![TechDivisionCard](/_Resources/Static/Packages/TechDivision.Card.Decks/Documentation/en/ChildNodes_en.png)
+]]></source>
+            </trans-unit>
+            <trans-unit id="properties.showHiddenInMenus" xml:space="preserve">
+                <source>Show hidden Documents</source>
+            </trans-unit>
+            <trans-unit id="properties.showHiddenInMenus.ui.help.message" xml:space="preserve">
+                <source>Documents with activated "Hide in Menus" will not be shown (default). Activate if they should be shown anyways.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
