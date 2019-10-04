@@ -1,0 +1,12 @@
+prototype(TechDivision.Card:Augmenter.CardLayoutAugmenter) {
+    class.columnClass = Neos.Fusion:Case {
+        documentCard {
+            renderer = ${q(linkedNode).property('cardWidth') == '' ? 'card-width-1' : q(linkedNode).property('cardWidth')}
+            condition = ${Neos.Node.isOfType(node,'TechDivision.Card:DocumentCard')}
+        }
+        default {
+            renderer = ${q(node).property('cardWidth') == '' ? 'card-width-1' : q(node).property('cardWidth')}
+            condition = ${!Neos.Node.isOfType(node,'TechDivision.Card:DocumentCard')}
+        }
+    }
+}
