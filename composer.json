@@ -1,7 +1,7 @@
 {
-  "description": "TechDivision.Card.Decks",
-  "type": "neos-package",
   "name": "techdivision/card-decks",
+  "type": "neos-package",
+  "description": "Card-Deck NodeTypes for Neos CMS - Groups of cards, either manually added or automatically displayed, like child nodes, selected nodes or NodeTypes.",
   "keywords": ["card", "teaser", "neos", "nodetypes"],
   "license": [
     "GPL-3.0-or-later"
