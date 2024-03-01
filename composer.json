@@ -7,7 +7,7 @@
     "GPL-3.0-or-later"
   ],
   "require": {
-    "techdivision/card" : "^1.0.0"
+    "techdivision/card" : "^1.0 || ^2.0"
   },
   "extra": {
     "neos": {
